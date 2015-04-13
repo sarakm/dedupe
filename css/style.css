@@ -1,0 +1,52 @@
+	*{	
+		margin:0;
+		padding:0;	
+	}
+    body{
+        width: 100%;		
+		text-align:center;
+		}
+    #wrapper{
+	    width:70%;
+        height:100%;
+		margin:2% 15% 0 15%;
+		text-align:left;
+		background-color:#999;
+		border:1px dashed #000;
+		overflow:hidden;
+	}
+    header {
+        height:20%;
+		padding:0px;
+		background-color:#66cccc;
+		}
+	.logo{
+		padding-bottom:15px;
+		padding-top:15px;	
+	}
+	#login
+	{
+	 float:right;
+	}
+	#main-content {
+        height:80%;
+        width:100%;	
+    }
+	#sidebar{
+        background-color:#999;
+        width:20%;
+        height:100%;	
+        float:left;
+    }
+    #nav {
+        width:200px;
+        height:80%;		
+        float:left;
+    }
+	#content {
+        height:100%;
+		width:80%;
+        background-color:#ccff99;        
+        float:left;		
+    }
+</style>
