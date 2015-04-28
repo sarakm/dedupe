@@ -1,20 +1,24 @@
 	*{	
 		margin:0;
 		padding:0;	
-	}
+	 }
+
     body{
-        width: 100%;		
+        width: 100%;
+		height:auto;
 		text-align:center;
 		}
+
     #wrapper{
 	    width:70%;
-        height:100%;
+        height:auto;
 		margin:2% 15% 0 15%;
 		text-align:left;
 		background-color:#999;
 		border:1px dashed #000;
 		overflow:hidden;
 	}
+
     header {
         height:20%;
 		padding:0px;
@@ -24,20 +28,21 @@
 		padding-bottom:15px;
 		padding-top:15px;	
 	}
-	#login
-	{
+
+	#login{
 	 float:right;
 	}
+	
 	#main-content {
         height:80%;
         width:100%;	
     }
 	#sidebar{
-        background-color:#999;
+		background-color:#999;
         width:20%;
         height:100%;	
-        float:left;
-    }
+        float:left;		
+	}
     #nav {
         width:200px;
         height:80%;		
@@ -46,7 +51,27 @@
 	#content {
         height:100%;
 		width:80%;
-        background-color:#ccff99;        
+        background-color:#fff;        
         float:left;		
     }
-</style>
+	legend{
+		margin-left:30%;
+	}
+	.close {
+		float:right;
+	
+	}
+	#rec1 #rec2{ 
+		display:inline-block;
+		width:200px;
+		margin-left:20%;
+		float:left;		
+		 
+	 } 
+    #confirm_rad{
+		clear:left;
+	    display:inline-block;
+		width:200px;
+        /*float:right;*/		
+	
+	}	

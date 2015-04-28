@@ -1,0 +1,171 @@
+Layout Styles */	
+#mainContainer
+	{
+	width: 750px;
+	min-width: 750px;
+	margin: 0 auto;
+	}
+	
+#header
+	{
+	background-color: #0000ac;
+	background-image: url(header.bg.jpg);
+	background-position: top;
+	background-repeat: repeat-x;
+	margin: 0;
+	padding: 10px;
+	}
+	
+#sideBarContentContainer
+	{
+	/* For a "two-stripe" look with columns of equal height, add your bg.gif here" */
+	background-image: url(columns.bg.gif);
+	background-repeat:repeat-y;
+	margin: 0 auto;
+	padding: 0;
+	width: 748px; /* Original width of 750px (the total width of the page) - the width of the border (2px)*/
+	position: relative;
+	border-right: #000000 1px solid;
+	border-left: #000000 1px solid;
+	}
+
+#sideBar
+	{
+	width: 190px; /* Width of your nav column */
+	float: right;
+	margin: 0;
+	padding: 0;
+	}
+
+/* IE 6.0: For some reason, if you just specify padding here it'll add 10 px  */
+/* to the entire layout and cause the page to scroll horizontally. So we have */
+/* to specify the width and then set a margin on it.  The width is equal to   */
+/* the width of the column, 190px - the 10px margin * 2                       */
+#sideBar p
+	{
+	margin: 10px auto;
+	width: 170px;
+	}
+
+#sideBarContentWrapper > #sideBar p
+	{
+	padding: 10px;
+	margin: 0;
+	}
+	
+#content
+	{
+	float: right;
+	width: 538px; /* Width of your content column (560px) - the 2 pixels border - the padding */
+	margin: 0;
+	padding: 10px;
+	}
+
+#footer
+	{
+	margin: 0;
+	padding: 20px 10px;
+	clear: both;
+	border: #000000 1px solid;
+	background-color: #d2cbbd;
+	}
+
+
+body
+        {
+        font-family: Verdana, Arial, Helvetica, sans-serif;
+        font-size: 13px;
+        line-height: 17px;
+        margin: 0;
+        padding: 0;
+        }
+
+h1, h2, h4
+        {
+        text-align: center;
+        color: #ffffff;
+        }
+
+h1
+	{
+	font-size: 2em;
+	line-height: 1em;
+	}
+
+h4 a, h4 a:visited
+        {
+        color: #d9dcec;
+        }
+
+h4 a:hover
+        {
+        color: #ffffff;
+        text-decoration: none;
+        }
+
+h2
+        {
+        font-size: 18px;
+        }
+
+p
+        {
+        margin-top: 0px;
+        margin-bottom: 20px;
+        }
+
+.clear_both
+        {
+        clear: both;
+        }
+
+.code
+	{
+	font-family:"Courier New", Courier, monospace;
+	}
+
+
+#sideBar ul
+	{
+	margin: 0;
+	padding: 0;
+	border-bottom: #978e7c 1px solid;
+	width: 189px;
+	}
+
+/*
+ * IE fix for additional padding that otherwise get's rendered between list items
+ */
+#sideBar ul li
+	{
+	height: 1%;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	}
+
+#sideBarContentContainer> #sideBar
+	{
+	height: auto;
+	}
+	
+#sideBar ul li a, #sideBar ul li a:visited
+	{
+	display: block;
+	border-top: #978e7c 1px solid;
+	padding: 5px 10px;
+	background-image: url(sidenav.bg.gif);
+	background-position: bottom;
+	background-repeat:repeat-x;
+	background-color: #fffbf7;
+	color: #59503e;
+	text-decoration: none;
+	font-weight: bold;
+	}
+	
+#sideBar ul li a:hover
+	{
+	color: #000000;
+	text-decoration: underline;
+	}
+

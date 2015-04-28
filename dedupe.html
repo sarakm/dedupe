@@ -3,7 +3,7 @@
 <head>
 	<title>Dedupe</title>
 	<meta charset ="UTF-8">
-	<link rel="stylesheet" type="text/css" media = "all" href="css/styles.css" />
+	<link rel="stylesheet" type="text/css" media = "all" href="css/style.css" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset=utf-8" />
 	<meta name="keywords" content="Dedupe Responsive web template,Dedupe, XML Parser, JSON file parser  " />
@@ -13,13 +13,13 @@
 	<header>
 		<hgroup>
 			<a href="/dedupe.html">
-				<img src="img/logo1.png" class="logo" alt="Logo" width="auto" height="auto"/>
+				<img src="img/logo.png" class="logo" alt="Logo" width="auto" height="auto"/>
 			</a>
 			 <a href="login.php" id="login">Log In</a>
 		</hgroup>
 	</header>
 	 <main id="main_content">
-		<section id="left_nav">  
+		<section id="sidebar">  
   			<nav><!-- #left menu -->
 			  <ul>
 				<li><a href="#">Home</a></li>
@@ -35,65 +35,61 @@
 							<legend>Upload Data File</legend>
 		                    <label for="upload_file">Choose...</label>
 							<input type="file" name="upload_file" id="upload_file" onchange="fileSelected();" />
-							<button type="submit" value="Upload" onclick="startUploading()" >Upload</button>	
-		                </fieldset>
-						<article>
-							<p id="error1">You should select valid image files only!</p>
+							<button type="submit" value="Upload" onclick="startUploading()" >Upload</button>
+							<!--<p id="error1">You should select valid image files only!</p>
 							<p id="error2">An error occurred while uploading the file</p>
-							<p id="abort">The upload has been cancelled by the user or the browser dropped the connection</p>
+							<p id="abort">The upload has been cancelled by the user or the browser dropped the connection</p>-->
 							<p id="warn_size">Your file is very big. We can't accept it. Please select smaller file.</p> 
-						</article>
-		                <div id="progress_info">
-							<div id="progress_percent">&nbsp;</div>
-						</div>
-						<div id="upload_response">
-							<p>Information: File uploaded successfully. <!--php code here--> records are found!</p>
-							<img src="img/close.png" width="15px" height = "15px" onclick="close_div()" />
-						</div>							    
-					</form>    		
-
-				</section><!--#uploads -->
+							<div id="progress_info">
+							   <div id="progress_percent">&nbsp;</div>
+							</div>
+							<div id="upload_response">
+								<p>Information: File uploaded successfully. <!--php code here--> records are found!</p>
+								<img class ="close" src="img/close.png" width="15px" height = "15px" onclick="close_div()">							 
+							</div>							
+		                </fieldset>					    
+					</form> 
+					</section><!--#uploads -->
 				<form id="parse-file" enctype="multipart/form-data" method="post" action="results.php">
-				<section><!--#data analysis-->
-					<article id="data-analysis">
+				  <section><!--#data analysis-->
+					<article id="data-analysis">					 
 						<legend>Start Data Analysis</legend>
 						<input type="button" value="Dedupe" onclick="startDeduping()" />						
 						<select name="Results Format">
 							<option value="xml">XML</option>
 							<option value="json">JSON</option>
 							<option value="csv">CSV</option>							
-						</select>
-						<img src="img\close.png" width="15px" height = "15px" onclick="close_div()" /> 
-					</article>
+						</select>						
+					 </article>
 					<fieldset id="display-results">
 						<legend>Analysis is finished</legend>
 						<div><h3>Total Records Analyzed:<div id="total-rec-count"><!--php code here--></div></h3></div>
 						<div><h3>Dupes Found:<div id="dupe-rec-count"><!--php code here--></div></h3></div>
 						<div><h3>Count of Clear Records:<div id="clear-rec-count"><!--php code here--></div></h3></div>
-						<img src="img/close.png" width="15px" height = "15px" onclick="close_div()" />
+						<img class ="close" src="img/close.png" width="15px" height = "15px" onclick="close_div()">
 					</fieldset>
 					<fieldset id="display-results1">
 						<legend>Analysis is finished</legend>
 						<div><h3>Clear Data File:<div id="clear-file"><!--php code here--></div></h3></div>
 						<div><h3>Deleted Dupes File:<div id="dupes-file"><!--php code here--></div></h3></div>
-						<img src="img/close.png" width="15px" height = "15px" onclick="close_div()" />						
+						<img class ="close" src="img/close.png" width="15px" height = "15px" onclick="close_div()">						
 					</fieldset>
 				</section><!--#data analysis-->	
 				<section><!--#confirmation -->
 					<fieldset id="confirm">
 						<legend> Please confirm, Are they duplicate records?</legend>
 						<hr/>
-						<div>
+						<div id="rec1">
 							<label>Record 1:</label>
 							<textarea rows="2" cols="20">Lorel ipsum</textarea>
 							<input type = "checkbox" id = "chk1" value = "" />
 						</div>
-						<div>
+						<div id="rec2">
 							<label>Record 2:</label>
 							<textarea rows="2" cols="20">Lorel ipsum</textarea>
 							<input type = "checkbox" id = "chk2" value = "" />
 						</div>
-						<div>							 
+						<div id="confirm_rad">							 
 							<label> Please select one </label></br>
 							<input type = "radio" name="rad" id = "rad1" value= "yes">YES</br>						 
 							<input type = "radio" name="rad" id = "rad2" value= "no" checked>NO</br>
